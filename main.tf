@@ -57,6 +57,7 @@ module "apim" {
   capacity             = 1
   virtual_network_type = "None"
   subnet_id            = data.terraform_remote_state.network.outputs.subnets["apim"].id
+  identity_ids         = []
   additional_tags = {
     CostCenter = "ABC000CBA"
     By         = "parisamoosavinezhad@hotmail.com"
